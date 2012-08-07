@@ -1,0 +1,61 @@
+<project name="jgeom" default="all" basedir=".">
+    <description>
+        Build file for jgeom
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src/java"/>
+  <property name="build" location="build"/>
+  <property name="dist"  location="dist"/>
+  <property name="docs"  location="javadoc"/>
+  
+  <property name="vtk.jar" location="lib/vtk.jar"/>
+
+  <target name="all" depends="dist,javadoc"/>
+  
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" classpath="${vtk.jar}" destdir="${build}" includeantruntime="false"/>
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+    
+    <jar jarfile="${dist}/lib/jgeom-core.jar" basedir="${build}"/>
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the build, dist, and document directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+    <delete dir="${docs}"/>
+  </target>
+  
+    <target name="javadoc"
+            depends="init"
+            description="Create the jgeom documentation">
+    
+        <echo message="Javadoc to ${docs}"/>
+        <javadoc classpath="${vtk.jar}" destdir="${docs}" useexternalfile="yes">
+            <fileset dir="${src}" defaultexcludes="yes">
+                <exclude name="**/Triangle-1.gif"/>
+            </fileset>
+    
+    
+            <!-- Updated link to current JDK 1.6 API (tdn) -->
+            <link href="http://java.sun.com/javase/6/docs/api/"/>
+    
+        </javadoc>
+    </target>
+</project>
