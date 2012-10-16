@@ -27,8 +27,8 @@ import java.util.List;
  *
  * @author Java-code by X.Philippeau - Pseudo-code by Guibas and Stolfi
  *
- * @see Primitives for the Manipulation of General Subdivisions
- *      and the Computation of Voronoi Diagrams (Leonidas Guibas,Jorge Stolfi)
+ * @see "Primitives for the Manipulation of General Subdivisions
+ *      and the Computation of Voronoi Diagrams (Leonidas Guibas,Jorge Stolfi)"
  */
 public class Delaunay {
  
