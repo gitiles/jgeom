@@ -167,7 +167,8 @@ public class QuadEdge {
 	/**
 	 * attach/detach the two edges = combine/split the two rings in the dual space
 	 *
-	 * @param q1,q2 the 2 QuadEdge to attach/detach
+	 * @param a first  of the 2 QuadEdges to attach/detach
+	 * @param b second of the 2 QuadEdges to attach/detach
 	 */
 	public static void splice(QuadEdge a, QuadEdge b) {
 		QuadEdge alpha = a.onext().rot();
@@ -187,7 +188,8 @@ public class QuadEdge {
 	/**
 	 * Create a new QuadEdge by connecting 2 QuadEdges
      *
-	 * @param e1,e2 the 2 QuadEdges to connect
+	 * @param e1 first  of the 2 QuadEdges to connect
+	 * @param e2 second of the 2 QuadEdges to connect
 	 * @return the new QuadEdge
 	 */
 	public static QuadEdge connect(QuadEdge e1, QuadEdge e2) {
@@ -278,7 +280,7 @@ public class QuadEdge {
 	/**
 	 * Test if the Point p is at the right of the QuadEdge q.
 	 *
-	 * @param QuadEdge reference
+	 * @param q QuadEdge reference
 	 * @param p Point to test
 	 * @return true/false
 	 */
@@ -288,7 +290,9 @@ public class QuadEdge {
  
 	/** return true if a, b and c turn in Counter Clockwise direction
 	 *
-	 * @param a,b,c the 3 points to test
+	 * @param a first  of the 3 points to test
+	 * @param b second of the 3 points to test
+	 * @param c third  of the 3 points to test
 	 * @return true if a, b and c turn in Counter Clockwise direction
 	 */
 	public static boolean isCounterClockwise(Point a, Point b, Point c) {
@@ -302,7 +306,9 @@ public class QuadEdge {
 	 *
 	 *   test if the point d is inside the circumscribed circle of triangle a,b,c
 	 *
-	 * @param a,b,c triangle
+	 * @param a triangle Point
+	 * @param b triangle Point
+	 * @param c triangle Point
 	 * @param d point to test
 	 * @return  true/false
 	 */
