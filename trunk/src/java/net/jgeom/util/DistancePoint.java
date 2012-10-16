@@ -36,7 +36,7 @@ public class DistancePoint {
      * @param y1
      * @param x2
      * @param y2
-     * @return
+     * @return The distance of p3 to the segment defined by p1,p2
      */
     public static double distanceToSegment(double x3, double y3, double x1, double y1, double x2, double y2) {
 	final Point2d p3 = new Point2d(x3, y3);
