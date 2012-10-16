@@ -25,8 +25,8 @@ package net.jgeom.nurbs.util;
  *
  * @author Code by X.Philippeau - Structure by Guibas and Stolfi
  *
- * @see Primitives for the Manipulation of General Subdivisions
- *      and the Computation of Voronoi Diagrams (Leonidas Guibas,Jorge Stolfi)
+ * @see "Primitives for the Manipulation of General Subdivisions
+ *      and the Computation of Voronoi Diagrams (Leonidas Guibas,Jorge Stolfi)"
  */
 public class QuadEdge {
  
