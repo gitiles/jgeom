@@ -79,7 +79,7 @@ public class Delaunay {
 	 * @param maxx maximum x
 	 * @param maxy maximum y
 	 */
-	public void setBoundigBox(int minx,int miny,int maxx,int maxy) {
+	public void setBoundingBox(int minx,int miny,int maxx,int maxy) {
 		// update saved values
 		bbox.minx=minx; bbox.maxx=maxx;
 		bbox.miny=miny; bbox.maxy=maxy;
@@ -105,7 +105,7 @@ public class Delaunay {
 		int maxx = Math.max(bbox.maxx, p.x);
 		int miny = Math.min(bbox.miny, p.y);
 		int maxy = Math.max(bbox.maxy, p.y);
-		setBoundigBox(minx, miny, maxx, maxy);
+		setBoundingBox(minx, miny, maxx, maxy);
 		//System.out.println("resizing bounding-box: "+minx+" "+miny+" "+maxx+" "+maxy);
 	}
  
