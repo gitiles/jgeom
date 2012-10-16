@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
  
 /**
- * Incremental Delaunay Triangulatiuon
+ * Incremental Delaunay Triangulation
  *
  * @author Java-code by X.Philippeau - Pseudo-code by Guibas and Stolfi
  *
@@ -49,7 +49,7 @@ public class Delaunay {
 	private BoundingBox bbox = new BoundingBox();
  
 	/**
-	 * Constuctor:
+	 * Constructor:
 	 */
 	public Delaunay() {
  
@@ -72,9 +72,12 @@ public class Delaunay {
 	}
  
 	/**
-	 * update the dimension of the bounding box
+	 * summits of the rectangle:  update the dimension of the bounding box
 	 *
-	 * @param minx,miny,maxx,maxy summits of the rectangle
+	 * @param minx minimum x
+	 * @param miny minimum y
+	 * @param maxx maximum x
+	 * @param maxy maximum y
 	 */
 	public void setBoundigBox(int minx,int miny,int maxx,int maxy) {
 		// update saved values
