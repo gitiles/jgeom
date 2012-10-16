@@ -8,6 +8,8 @@
   <property name="dist"  location="dist"/>
   <property name="docs"  location="javadoc"/>
   
+  <property name="lib.dir"  location="lib"/>
+  
   <property name="vtk.jar" location="lib/vtk.jar"/>
 
   <target name="all" depends="dist,javadoc"/>
@@ -22,7 +24,7 @@
   <target name="compile" depends="init"
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}" classpath="${vtk.jar}" destdir="${build}" includeantruntime="false"/>
+    <javac srcdir="${src}" classpath="${lib.dir}/vecmath.jar;${vtk.jar}" destdir="${build}" includeantruntime="false"/>
   </target>
 
   <target name="dist" depends="compile"
