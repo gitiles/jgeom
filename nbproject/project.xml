@@ -47,10 +47,11 @@
             </view>
             <subprojects/>
         </general-data>
-        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/1">
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
             <compilation-unit>
                 <package-root>src/java</package-root>
                 <classpath mode="compile">lib/vecmath.jar;lib/vtk.jar</classpath>
+                <javadoc-built-to>C:\Program Files\NetBeans 7.2\javadoc</javadoc-built-to>
                 <source-level>1.5</source-level>
             </compilation-unit>
         </java-data>
