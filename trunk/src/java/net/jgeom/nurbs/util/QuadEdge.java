@@ -238,11 +238,11 @@ public class QuadEdge {
 	}
  
 	/**
-	 * Return the distance from a point to a segment
+	 * Return the distance from a segment to a point
 	 *
-	 * @param ps,pe the start/end of the segment
-	 * @param p the
-	 * @return
+	 * @param ps,pe the start/end points of the segment
+	 * @param p the point
+	 * @return distance value
 	 */
 	private static double distanceToSegment(Point ps, Point pe, Point p) {
 		if (ps.x==pe.x && ps.y==pe.y) return squaredistance(ps,p);

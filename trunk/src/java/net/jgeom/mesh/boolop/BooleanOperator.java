@@ -485,7 +485,7 @@ public class BooleanOperator {
      * again.
      * 
      * @param operator Boolean operator that indicates how to combine the surfaces
-     * @return
+     * @return the resulting GeometryArray surface
      */
     public GeometryArray getSurface(int operator) {
         List<Face<Point3f>> regular = new LinkedList<Face<Point3f>>();

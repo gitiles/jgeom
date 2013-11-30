@@ -32,7 +32,7 @@ public class Mesh<T>  {
 
   /**
    * Create a new GenericMesh with space for the given number of vertices, edges and faces.
-   * @param nVertices Number of vertices for this mesh.
+   * // @param nVertices Number of vertices for this mesh.
    * @param nEdges Number of edges for this mesh.
    * @param nFaces Number of faces for this mesh.
    */

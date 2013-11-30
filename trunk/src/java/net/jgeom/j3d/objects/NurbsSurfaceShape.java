@@ -78,7 +78,7 @@ public  class NurbsSurfaceShape extends Shape3D{
     }
     
     /**
-     * @return
+     * @return the contained NurbsSurface
      */
     public NurbsSurface getNurbs(){
         return nurbs;
@@ -122,7 +122,9 @@ public  class NurbsSurfaceShape extends Shape3D{
     }
     
     /**
-     * @param segV sets the segment in u and v direction and performs a recalculation.
+     * setSegments sets the segment in u and v direction and performs a recalculation.
+     * @param u dimension in u direction
+     * @param v dimension in v direction
      */
     public void setSegments(int u, int v) {
         this.segU = u;
