@@ -10,7 +10,7 @@
   
   <property name="lib.dir"  location="lib"/>
   
-  <property name="classpath"  location="${lib.dir}/vecmath.jar;${lib.dir}/vtk.jar"/>
+  <property name="classpath"  location="${lib.dir}/vecmath.jar;${lib.dir}/j3dcore.jar;${lib.dir}/j3dutils.jar;${lib.dir}/vtk.jar"/>
   
   <property name="vtk.jar" location="lib/vtk.jar"/>
 
