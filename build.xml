@@ -62,4 +62,18 @@
     
         </javadoc>
     </target>
+    
+    <target name="example"
+            description="Run simple demonstration application"
+            depends="dist">
+            
+        <java classname="net.jgeom.j3d.examples.ArbitraryNURBSGeometry" fork="true">
+            <classpath>
+                <pathelement location="${dist}/lib/jgeom-core.jar"/>
+                <pathelement location="${lib.dir}/vecmath.jar"/>
+                <pathelement location="${lib.dir}/j3dcore.jar"/>
+                <pathelement location="${lib.dir}/j3dutils.jar"/>
+            </classpath>
+        </java>
+    </target>
 </project>
